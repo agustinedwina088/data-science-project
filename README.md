@@ -1,24 +1,39 @@
 # Data Science Project
 
-This repository contains a time series analysis project focused on exploring and modeling economic data.
+# 📈 Personal Consumption Expenditure Forecasting
 
-## 📁 Project Structure
+This project applies classical time series forecasting techniques to analyse and predict US Personal Consumption Expenditure (PCE) using R.
 
-- `PCE.csv` – Primary dataset used for analysis (e.g., Personal Consumption Expenditures or similar).
-- `time series analysis.R` – Main R script for performing time series decomposition, visualization, and forecasting.
-- `README.md` – Project overview and usage instructions.
+---
 
-## 📊 Key Features
+## 📊 Project Overview
 
-- Data import and preprocessing
-- Time series decomposition and trend analysis
-- Visual exploration with `ggplot2`
-- Forecasting using classical and statistical models
-- Written entirely in R
+- **Data Source**: [FRED Economic Data - PCE](https://fred.stlouisfed.org/)
+- **Time Span**: 1959 to 2024
+- **Forecast Target**: 2025
+- **Approach**: Classical time series models and decomposition
+- **Key Models**: Drift, Holt-Winters, and ARIMA
 
-## 🔧 Requirements
+---
 
-To run the analysis, make sure you have **R** installed and the following packages:
+## 📦 Features
 
-```r
-install.packages(c("ggplot2", "forecast", "tseries", "readr"))
+- Data loading and preprocessing
+- Missing value simulation and imputation using:
+  - Linear interpolation
+  - Exponential moving average
+  - Kalman filters (StructTS and ARIMA)
+- STL decomposition for trend and seasonality
+- Train-test split for model evaluation
+- Forecasting with:
+  - Drift model (`rwf`)
+  - Holt-Winters exponential smoothing
+  - ARIMA (`auto.arima`)
+- Model comparison using RMSE, MAE, MAPE
+- Final 12-month forecast for 2025
+- Visualizations with `ggplot2`
+
+---
+
+## 📂 Project Structure
+
