@@ -1,39 +1,44 @@
-# Data Science Project
-
 # 📈 Personal Consumption Expenditure Forecasting
 
-This project applies classical time series forecasting techniques to analyse and predict US Personal Consumption Expenditure (PCE) using R.
+This project applies classical time series forecasting techniques to analyze and predict US Personal Consumption Expenditure (PCE) using R. It demonstrates key steps in time series modeling: imputation, decomposition, forecasting, and evaluation.
 
 ---
 
 ## 📊 Project Overview
 
-- **Data Source**: [FRED Economic Data - PCE](https://fred.stlouisfed.org/)
-- **Time Span**: 1959 to 2024
-- **Forecast Target**: 2025
-- **Approach**: Classical time series models and decomposition
-- **Key Models**: Drift, Holt-Winters, and ARIMA
+- **Data Source**: [FRED Economic Data – PCE](https://fred.stlouisfed.org/)
+- **Time Range**: January 1959 to December 2024
+- **Forecast Target**: January–December 2025
+- **Objective**: To build and compare forecasting models for PCE
+- **Techniques**: Classical time series models with log-transformation and STL decomposition
+- **Models Used**: Drift, Holt-Winters Exponential Smoothing, ARIMA
 
 ---
 
 ## 📦 Features
 
-- Data loading and preprocessing
-- Missing value simulation and imputation using:
+- 📥 Data import and preprocessing
+- 🧹 Missing value simulation and imputation using:
   - Linear interpolation
   - Exponential moving average
-  - Kalman filters (StructTS and ARIMA)
-- STL decomposition for trend and seasonality
-- Train-test split for model evaluation
-- Forecasting with:
+  - Kalman filtering (StructTS and ARIMA)
+- 🔍 STL decomposition for trend/seasonality analysis
+- 🧪 Train-test split for model validation
+- 📈 Forecasting with:
   - Drift model (`rwf`)
-  - Holt-Winters exponential smoothing
+  - Holt-Winters (`HoltWinters`)
   - ARIMA (`auto.arima`)
-- Model comparison using RMSE, MAE, MAPE
-- Final 12-month forecast for 2025
-- Visualizations with `ggplot2`
+- 📊 Forecast accuracy using RMSE, MAE, and MAPE
+- 📅 Final forecast for 2025 with 80% and 95% confidence intervals
+- 🖼 Clean visualizations using `ggplot2`
 
 ---
 
 ## 📂 Project Structure
 
+```text
+data_science_project/
+│
+├── PCE.csv                  # Input dataset (from FRED)
+├── pce_forecasting.R        # Main R script for time series analysis
+└── README.md                # Project documentation
